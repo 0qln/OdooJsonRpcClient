@@ -15,8 +15,15 @@ namespace PortaCapena.OdooJsonRpcClient.Converters
 {
     public static class OdooModelMapper
     {
-        private const string OdooModelSuffix = "OdooModel";
-        private const string OdooEnumSuffix = "OdooEnum";
+        /// <summary>
+        /// A suffix that will be appended to odoo model names.
+        /// </summary>
+        public static string OdooModelSuffix { get; set; } = "OdooModel";
+        
+        /// <summary>
+        /// A suffix that will be appended to odoo enum names.
+        /// </summary>
+        public static string OdooEnumSuffix { get; set; } = "OdooEnum";
 
         public static bool ConverOdooPropertyToDotNet(Type dotnetType, JToken value, out object result)
         {
